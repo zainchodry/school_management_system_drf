@@ -42,8 +42,16 @@ DJANGO_APPS = [
 PROJECT_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
-    'accounts'
+    'accounts',
+    'academics',
+    'attendance',
+    'exams',
+    'fees',
+    'students',
+    'teachers'
 ]
+
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,6 +82,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'school_management.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.User'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
